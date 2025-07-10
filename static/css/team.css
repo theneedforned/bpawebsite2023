@@ -1,0 +1,8 @@
+#members{
+    display: flex;
+}
+
+.member{
+    margin: 20px;
+    padding: 18px;
+}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ car.brand }} {{ car.model }}
+{% endblock %}
+{% block customcss %}
+<link href="{{ url_for('static', filename='css/cardetail.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    </div>
+    <div id = "listing">
+      <div id = "listimg">
+        <img src="{{ url_for('static', filename='imgs/{}'.format(car.filename)) }}">
+      </div>
+      <div class = "container" id = "listingtxt">
+        <p>Wear: {{ car.wear }}</p>
+        <p>Year: {{ car.year }}</p>
+        <p>Sales of this model: {{ car.sales }}</p>
+        <p>Color: {{ car.color }}</p>
+      </div>
+      <div id = "listingdetails">
+        <h1>{{ car.brand }} {{ car.model }}</h1>
+        <h1 id="price">
+        {{ car.price }} 
+        </h1>
+      </div>
+      <!--<button type="button" class="btn btn-primary" id = "buybutton">Purchase</button>-->
+      <div id="contactinfo">
+        <h1>To buy: Contact 555-9485</h1>
+      </div>
+    </div> 
+    <h1>More cars like this brand:</h1>
+    <div id = "carrecs">
+      {% for car in carssuggested %}
+      <a href="/car/{{ car.id }}">
+        <div class="car rounded-4 shadow">
+          <img src="{{ url_for('static', filename='imgs/{}'.format(car.filename))}}">
+          <div class = "info">
+            <h1>{{ car.brand }} {{ car.model }}</h1>
+            <p>Year: {{ car.year }}</p>
+            <h2>${{ car.price }}</h2>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    </div>
+{% endblock %}

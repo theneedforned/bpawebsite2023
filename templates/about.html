@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %}
+About us
+{% endblock %}
+{% block customcss %}
+<link href="{{ url_for('static', filename='css/aboutus.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+  </div>
+      <div id="intro">
+          <h1>Find used cars at good prices, and good condition!</h1>
+          <p> At Hollydale, we believe the search for affordable car prices should be as easy as it is on paper, and here you will find your money's worth. </p>
+        </div>
+        <div id="intro2">
+            <h1>Trusted for over 22 years.</h1>
+            <p>In business since the early days of the internet, avoiding near catastrophe of Y2K, we've been known to provide as stellar customer service as found in our Brick and mortar location, as well as providing top functionality on the web to provide an easy experience for all.</p>
+        </div>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class = "review">
+                <p class = "quote">"I was looking for a used car to buy for my son who recently got his license, and I did not expect the process to be as straight forward as it was! But whenever it wasn't as straightforward, customer service took pleasure in catering to my issues and providing the best experience they could, I would recommend anyone here to check out this website!"</p>
+                <p class="name">- Heather Turner</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class = "review">
+                <p class = "quote">"i was hoping to sell my truck that i've used for a long time, thankfully I came across hollydale, they provided me with all the tools i needed to start putting my truck up for sale easily, and gave me an option to either keep the car for sale at their several locations for them to handle it, or have the buyer interested contact me directly"</p>
+                <p class="name">- Robin Barlowe</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class = "review">
+                <p class = "quote">"I've used this website a couple times, but through all those times, i've been provided star quality customer service! A big part of their business model revolves around catering for the consumer, and everything you do with them is made to be easy for you!"</p>
+                <p class="name">- Elinor Katz</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      <div id="contacthours">
+      <div>
+        <table>
+          <tr>
+            <th>Day</th>
+            <th>Hours</th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>8 AM - 8 PM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>8 AM - 8 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>8 AM - 8 PM</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>8 AM - 8 PM</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>8 AM - 8 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday</td>
+            <td>9 AM - 7 PM</td>
+          </tr>
+          <tr>
+            <td>Sunday</td>
+            <td>9 AM - 7 PM</td>
+          </tr>
+        </table>
+        <sub>*Dates may also change depending on holidays</sub>
+        <p>Phone: 555-4376<br>Fax: 555-4394</p>
+      </div>
+      <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d394.56884232438335!2d-80.14755259972816!3d26.009404843610312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ab9f24d5c861%3A0x8b9f0b0d8b4ea700!2s2018%20Van%20Buren%20St%2C%20Hollywood%2C%20FL%2033020!5e1!3m2!1sen!2sus!4v1669582987958!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div>
+        <h1>Contact Us:</h1>
+        <form method="post">
+            <label>Enter your name: </label>
+            <br>
+            <input type="text" name="name" id="name" placeholder="Sheriffton" required>
+            <br>
+            <label>Enter your email: </label>
+            <br>
+            <input type="email" name="email" id="email" placeholder="example@domain.com" required>
+            <br>
+            <label>Type in your message: </label>
+            <br>
+            <textarea name="message" id="message" placeholder="Type text here..."></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

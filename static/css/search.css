@@ -1,0 +1,16 @@
+.headingelems{
+    display: flex;
+    padding: 2px;
+    margin: auto;
+    width: 90%;
+}
+
+.checkbox{
+    margin: 25px;
+    padding: 5px;
+}
+
+#buttonthingy{
+    width: 200px;
+    margin: 20px;
+}

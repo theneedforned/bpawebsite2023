@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% block title %}
+usedcarsite
+{% endblock %}
+{% block customcss %}
+<link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='css/search.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<div class="container-fluid headingelems">
+    <div class="checkbox">
+        <h4>Brands</h4>
+        <div class="form-check">
+            <input class="form-check-input brands-selection" type="checkbox" value="Affinity" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Affinity
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input brands-selection" type="checkbox" value="Haednay" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Haednay
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input brands-selection" type="checkbox" value="Hanzwaggon" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Hanzwaggon
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input brands-selection" type="checkbox" value="Rolota" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Rolota
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input brands-selection" type="checkbox" value="VMW" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                VMW
+            </label>
+        </div>
+    </div>
+    <div class="checkbox">
+        <h4>Wear</h4>
+        <div class="form-check">
+            <input class="form-check-input wear-selection" type="checkbox" value="Nonexistent" id="wear_check_1" checked>
+            <label class="form-check-label" for="wear_check_1">
+                Nonexistent
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input wear-selection" type="checkbox" value="Minimal" id="wear_check_2" checked>
+            <label class="form-check-label" for="wear_check_2">
+                Minimal
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input wear-selection" type="checkbox" value="Moderate" id="wear_check_3" checked>
+            <label class="form-check-label" for="wear_check_3">
+                Moderate
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input wear-selection" type="checkbox" value="Large" id="wear_check_4" checked>
+            <label class="form-check-label" for="wear_check_4">
+                Large
+            </label>
+        </div>
+    </div>
+    <div class="checkbox">
+        <h4>Colors</h4>
+        <div class="form-check">
+            <input class="form-check-input color-selection" type="checkbox" value="Black" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Black
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input color-selection" type="checkbox" value="Blue" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Blue
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input color-selection" type="checkbox" value="Green" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Green
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input color-selection" type="checkbox" value="Grey" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                Grey
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input color-selection" type="checkbox" value="White" id="flexCheckChecked" checked>
+            <label class="form-check-label" for="flexCheckChecked">
+                White
+            </label>
+        </div>
+    </div>
+    <div class="checkbox">
+        <label for="customRange2" id="range1label" class="form-label">$0 - $500000</label>
+        <input type="range" id="range1" class="form-range" min="0" max="1000000" id="customRange2" oninput="thing()">
+    </div>
+    <div class="checkbox">
+        <select id='year-select' class="form-select" aria-label="Default select example">
+            <option selected>Select year</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="buttonthingy" onclick=submitFilter()>Filter</button>
+    </div>
+</div>
+<hr>
+<div id="root" class="container-fluid headingelems filter-output-container">
+  
+</div>
+<script src="{{ url_for('static', filename='js/react/react.development.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/react/react-dom.development.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/babel.min.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/search_components.js') }}" type="text/babel"></script>
+<script src="{{ url_for('static', filename='js/jquery-3.6.3.min.js') }}" ></script>
+<script src="{{ url_for('static', filename='js/range.js') }}"></script>
+{% endblock %}

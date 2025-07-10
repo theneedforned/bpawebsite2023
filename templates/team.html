@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+BPA Team
+{% endblock %}
+{% block customcss %}
+<link href="{{ url_for('static', filename='css/team.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<h1>
+  Our BPA team is consisted of:
+</h1>
+<div id = "members">
+  <div class = "member rounded-4 shadow">
+    <h2>Ethan Attias</h2>
+    <p>Programmer</p>
+  </div>
+  <div class = "member rounded-4 shadow">
+    <h2>Bogdan Krintal</h2>
+    <p>Programmer</p>
+  </div>
+  <div class = "member rounded-4 shadow">
+    <h2>Marcus Secu</h2>
+    <p>Programmer</p>
+  </div>
+  <div class = "member rounded-4 shadow">
+    <h2>Sophia Ossaoulenko</h2>
+    <p>Designer</p>
+  </div>
+</div>
+<p>Our chapter is located in McFatter Technical High School of Davie, Florida, and this website was made in the 2022-2023 school year</p>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ brand }}
+{% endblock %}
+{% block customcss %}
+<link href="{{ url_for('static', filename='css/brandpage.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+      <div class="category">
+        <h1>Cars from {{ brand }}</h1>
+          <div id="carsection">
+            {% for car in brandcars %}
+            <a href="/car/{{ car.id }}">
+            <div class="car rounded-4 shadow">
+              <img src="{{ url_for('static', filename='imgs/{}'.format(car.filename))}}">
+              <div class = "info">
+                <h1>{{ car.brand }} {{ car.model }}</h1>
+                <p>Year: {{ car.year }}</p>
+                <h2>${{ car.price }}</h2>
+              </div>
+            </div>
+          </a>
+            {% endfor %}
+          </div>
+          </div>
+{% endblock %}

@@ -1,0 +1,123 @@
+#listing {
+    display: flex;
+    margin: 20px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+#listing img {
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 600px;
+}
+
+#listingtxt {
+    width: 700px;
+    height: 370px;
+    overflow-y: scroll;
+}
+
+#listingtxt p{
+    font-size: 30px;
+}
+
+#contactinfo{
+    margin: 20px;
+    margin-right: 130px;
+}
+
+#listingdetails {
+    background-color: #0f6ffd;
+    border: 2px #0f6ffd solid;
+    border-radius: 20px;
+    color: white;
+    margin-top: 10px;
+    display: flex;
+}
+
+#listingdetails h1{
+    font-size: 40px;
+    padding: 10px;
+}
+
+#price{
+    margin-left: 160px;
+    border: 2px white solid;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+
+
+#carrecs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#buybutton{
+    width: 700px;
+    font-size: 40px;
+}
+
+.car{
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 550px;
+    flex-wrap: nowrap;
+}
+
+.car img{
+    width: 220px;
+    height:auto;
+}
+
+.info{
+    margin: 20px;
+}
+
+.info h1{
+    font-size: 25px;
+}
+
+.category{
+    margin: 10px;
+}
+
+.catscroll{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 768px) {
+    /* for mobile */
+    #listing img {
+        width: 300px;
+    }
+
+
+    #price{
+        margin-left: 10px;
+        border: 2px white solid;
+        margin-top: 5px;
+        margin-right: 5px;
+        border-radius: 20px;
+        background-color: white;
+        color: black;
+    }
+
+    #buybutton{
+        margin: 20px;
+        width: 700px;
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,12 @@
+/virtenv
+/.cache
+/.config
+/__pycache__
+/.upm
+/.breakpoints
+/replit.nix
+/pyproject.toml
+/poetry.lock
+/.replit
+/replit_zip_error_log.txt
+/Pipfile
